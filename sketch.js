@@ -2,7 +2,7 @@ var trex,trexRun,ground,groundI,ground2,cloud,cloudI;
 var x=0,ob,obI1,obI2,obI3,obI4,obI5,obI6,cloudG,obG;
 var play=5,end=7, gameState=play,trex_Collide,gameOver,gameOverI;
 var restart,restartI,hs = 0;
-var checkpoint, die, jump;
+var checkpoint, die, jump, bI;
 
 function preload(){
   trexRun = loadAnimation("trex1.png","trex3.png","trex4.png");
@@ -19,7 +19,8 @@ function preload(){
   restartI = loadImage("restart.png");
   checkpoint = loadSound("checkPoint.mp3");
   die = loadSound("die.mp3");
-  jump = loadSound("jump.mp3");  
+  jump = loadSound("jump.mp3"); 
+  bI = loadImage("abcd.jpg");
 }
 
 function setup(){
@@ -54,7 +55,7 @@ function setup(){
 
 function draw(){
   
-  background("black");
+  background(bI);
   fill("white");
   text("HIGH SCORE="+hs,370,50);
   if( x > hs){
